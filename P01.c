@@ -1,12 +1,16 @@
 //  program to calculate his gross salary
 #include<stdio.h>
 int main(){
-    int basicSalary;
+    long long basicSalary;
     printf("Enter Basic salary: ");
-    scanf("%d",&basicSalary);
-    int DA= (basicSalary*40)/100;
-    int HRA=(basicSalary*20)/100;
-    int grossSalary=basicSalary+DA+HRA;
-    printf("Gross Salary :%d",grossSalary);
+    scanf("%lld",&basicSalary);
+    if (basicSalary <= 0) {
+    printf("Invalid salary");
+    return 0;
+}
+    long long  DA= (basicSalary*0.04);
+    long long  HRA=(basicSalary*0.20);
+    long long grossSalary=basicSalary+DA+HRA;
+    printf("Gross Salary :%lld",grossSalary);
     return 0;
 }

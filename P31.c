@@ -1,4 +1,6 @@
-/*Write a program to find if the entered 3 digit number is Armstrong or not. Armstrong number is a number in which sum of cube of digits is equal to number, Ex: 153 = (1 * 1 * 1) + (5 * 5 * 5) + (3 * 3 * 3)*/
+/*Write a program to print out all Armstrong numbers between 100 and entered number( Only 3 digit
+number to be input). For example if entered number is 500 then the program should find all Armstrong
+numbers between 1 and 500*/
 #include<stdio.h>
 int count(int n){
     int cnt=0;
@@ -31,13 +33,14 @@ int armstrong(int num,int pow){
 
 int main(){
     int n;
-    printf("Enter number");
+    printf("Enter number between 100 to 500");
     scanf("%d",&n);
-    int digits=count(n);
-    if(armstrong(n,digits)){
-        printf("Armstrong number");
-    }else{
-        printf("Not armstrong");
+    int digits=3;
+    for(int i=100;i<=n;i++){
+         if(armstrong(i,digits)){
+        printf("\nArmstrong number %d",i);
     }
+    }
+   
     return 0;
 }

@@ -17,10 +17,13 @@ int main(){
     return 0;
 }
 int gcd(int j,int k){
-    while(k!=0){
-        int remainder=j%k;
-        j=k;
-        k=remainder;
+    // while(k!=0){
+    //     int remainder=j%k;
+    //     j=k;
+    //     k=remainder;
+    // }
+    if(k==0){
+        return j;
     }
-    return j;
+    gcd(k,j%k);
 }

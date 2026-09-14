@@ -1,6 +1,6 @@
 /* Write a c program which deletes the duplicate element of an array*/
 #include<stdio.h>
-void InsertionSort(int *,int);
+// void InsertionSort(int *,int);
 int main(){
      int arr[25],size;
     printf("ENter the size of array ");
